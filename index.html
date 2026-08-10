@@ -99,7 +99,7 @@
         <!-- English Version -->
         <div id="english">
             <h1>Privacy Policy</h1>
-            <p class="last-updated">Effective Date / Last Updated: July 26, 2026</p>
+            <p class="last-updated">Effective Date / Last Updated: August 10, 2026</p>
 
             <p>This <strong>Privacy Policy</strong> describes how <strong>QR Code Scanner</strong> ("we", "us", or "our")
                 handles your information when you use our mobile application ("App"). Your privacy is critically important
@@ -115,22 +115,27 @@
                 Video streams from your camera are processed locally on your device and are never recorded, transmitted,
                 stored on external servers, or shared with third parties.</p>
 
-            <h3>Photo Library / Media Access</h3>
+            <h3>Photo Library / Media Access & Storage Permission</h3>
             <p>The App uses Android's native System Photo Picker to allow you to select images containing QR codes from your
-                device gallery. We only process the specific image file selected by you to extract QR code data locally. We
-                do not scan, collect, or upload your photo library.</p>
+                device gallery for scanning. We only process the specific image file selected by you locally. Additionally, when
+                you use the QR Code Generation feature, the App may request permission to save the generated QR code images directly
+                into your device's photo gallery (`Pictures/QRScanner`). We do not scan, collect, or upload your photo library or your generated images.</p>
+
+            <h3>QR Code Generation</h3>
+            <p>When you create a QR code using our QR Code Generator feature, all input text and the resulting QR code image are processed entirely on your device (offline). We do not store, log, or transmit any text or QR content entered in the generator to any external server.</p>
 
             <h3>Local Storage</h3>
             <p>Scanned QR code results and your favorited items are stored locally on your device using a local Room
-                Database (`SQLite`). You can clear your scan history or delete items at any time through the App settings.
+                Database (`SQLite`). Generated QR codes are NOT saved into the app's local database. You can clear your scan history or delete items at any time through the App settings.
             </p>
 
             <h2>2. Use of Information</h2>
-            <p>All data processed by the App (camera feed, scanned QR contents) remains entirely on your device. We use this
+            <p>All data processed by the App (camera feed, scanned QR contents, generated QR contents) remains entirely on your device. We use this
                 data exclusively to:</p>
             <ul>
                 <li>Display scanned QR code text and links to you.</li>
-                <li>Allow you to copy, share, or save scanned QR codes locally on your device.</li>
+                <li>Generate QR code images locally based on text you provide.</li>
+                <li>Allow you to copy, share, or save scanned/generated QR codes locally on your device.</li>
             </ul>
 
             <h2>3. Third-Party Services and Analytics</h2>
@@ -158,7 +163,7 @@
         <!-- Vietnamese Version -->
         <div id="vietnamese">
             <h1>Chính sách bảo mật</h1>
-            <p class="last-updated">Ngày hiệu lực / Cập nhật lần cuối: 26 tháng 7, 2026</p>
+            <p class="last-updated">Ngày hiệu lực / Cập nhật lần cuối: 10 tháng 8, 2026</p>
 
             <p><strong>Chính sách bảo mật</strong> này mô tả cách <strong>QR Code Scanner</strong> ("chúng tôi")
                 xử lý thông tin của bạn khi bạn sử dụng ứng dụng di động của chúng tôi ("Ứng dụng"). Quyền riêng tư của bạn 
@@ -174,22 +179,25 @@
                 Luồng video từ máy ảnh của bạn được xử lý cục bộ trên thiết bị và không bao giờ được ghi lại, truyền đi,
                 lưu trữ trên các máy chủ bên ngoài hoặc chia sẻ với bên thứ ba.</p>
 
-            <h3>Quyền truy cập Thư viện ảnh / Phương tiện</h3>
+            <h3>Quyền truy cập Thư viện ảnh / Phương tiện & Quyền lưu trữ</h3>
             <p>Ứng dụng sử dụng Trình chọn ảnh hệ thống gốc của Android để cho phép bạn chọn hình ảnh chứa mã QR từ
-                thư viện thiết bị của bạn. Chúng tôi chỉ xử lý tệp hình ảnh cụ thể do bạn chọn để trích xuất dữ liệu mã QR cục bộ. 
-                Chúng tôi không quét, thu thập hoặc tải lên thư viện ảnh của bạn.</p>
+                thư viện thiết bị của bạn để quét. Chúng tôi chỉ xử lý tệp hình ảnh cụ thể do bạn chọn cục bộ. Ngoài ra, khi bạn sử dụng tính năng Tạo mã QR, Ứng dụng có thể yêu cầu quyền lưu hình ảnh mã QR đã tạo trực tiếp vào thư viện ảnh trên thiết bị của bạn (`Pictures/QRScanner`). Chúng tôi không quét, thu thập hoặc tải lên thư viện ảnh của bạn hoặc hình ảnh được tạo.</p>
+
+            <h3>Tạo Mã QR (QR Code Generation)</h3>
+            <p>Khi bạn tạo mã QR bằng tính năng Tạo mã QR của chúng tôi, tất cả văn bản đầu vào và hình ảnh mã QR kết quả đều được xử lý hoàn toàn trên thiết bị của bạn (ngoại tuyến/offline). Chúng tôi không lưu trữ, ghi nhật ký hoặc truyền bất kỳ văn bản hay nội dung QR nào đã nhập trong trình tạo đến bất kỳ máy chủ bên ngoài nào.</p>
 
             <h3>Lưu trữ cục bộ</h3>
             <p>Kết quả mã QR đã quét và các mục yêu thích của bạn được lưu trữ cục bộ trên thiết bị của bạn bằng cơ sở dữ liệu 
-                Room Database (`SQLite`) cục bộ. Bạn có thể xóa lịch sử quét hoặc xóa các mục bất kỳ lúc nào thông qua cài đặt Ứng dụng.
+                Room Database (`SQLite`) cục bộ. Các mã QR được tạo KHÔNG được lưu vào cơ sở dữ liệu cục bộ của ứng dụng. Bạn có thể xóa lịch sử quét hoặc xóa các mục bất kỳ lúc nào thông qua cài đặt Ứng dụng.
             </p>
 
             <h2>2. Sử dụng thông tin</h2>
-            <p>Tất cả dữ liệu do Ứng dụng xử lý (nguồn cấp dữ liệu máy ảnh, nội dung QR đã quét) hoàn toàn nằm trên thiết bị của bạn. 
+            <p>Tất cả dữ liệu do Ứng dụng xử lý (nguồn cấp dữ liệu máy ảnh, nội dung QR đã quét, nội dung QR đã tạo) hoàn toàn nằm trên thiết bị của bạn. 
                 Chúng tôi sử dụng dữ liệu này dành riêng cho việc:</p>
             <ul>
                 <li>Hiển thị văn bản mã QR đã quét và các liên kết cho bạn.</li>
-                <li>Cho phép bạn sao chép, chia sẻ hoặc lưu các mã QR đã quét cục bộ trên thiết bị của bạn.</li>
+                <li>Tạo hình ảnh mã QR cục bộ dựa trên văn bản bạn cung cấp.</li>
+                <li>Cho phép bạn sao chép, chia sẻ hoặc lưu các mã QR đã quét/đã tạo cục bộ trên thiết bị của bạn.</li>
             </ul>
 
             <h2>3. Dịch vụ của bên thứ ba và Phân tích</h2>
