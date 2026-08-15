@@ -1,85 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - QR Code Scanner</title>
+    <title>MHung Apps - Mobile Applications</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --primary-light: #e0f2fe;
+            --accent-green: #10b981;
+            --accent-green-hover: #059669;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
             line-height: 1.6;
-            color: #1e293b;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 24px;
-            background-color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .container {
-            background: #ffffff;
-            padding: 32px;
-            border-radius: 16px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            width: 100%;
+        }
+
+        /* Header / Hero */
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .brand-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 9999px;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         h1 {
-            color: #0284c7;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 12px;
-            margin-top: 0;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
         }
 
-        h2 {
-            color: #0f172a;
-            margin-top: 24px;
+        h1 span {
+            background: linear-gradient(135deg, #0284c7 0%, #38bdf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        ul {
-            padding-left: 20px;
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        .last-updated {
-            color: #64748b;
-            font-size: 0.9em;
-            margin-bottom: 24px;
+        /* Apps Grid */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+            margin-bottom: 48px;
         }
 
-        .app-link {
-            display: inline-block;
-            margin: 16px 0;
-            padding: 10px 20px;
-            background-color: #10b981;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-        }
-
-        .app-link:hover {
-            background-color: #059669;
-        }
-
-        hr {
-            border: 0;
-            height: 1px;
-            background: #e2e8f0;
-            margin: 40px 0;
-        }
-
-        .language-nav {
-            margin-bottom: 24px;
+        .app-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 32px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
             display: flex;
-            gap: 16px;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
         }
 
-        .language-nav a {
-            color: #0284c7;
-            text-decoration: none;
+        .app-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.1);
+            border-color: #cbd5e1;
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .app-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .app-title-group h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.25;
+        }
+
+        .app-category {
+            font-size: 0.85rem;
+            color: var(--text-muted);
             font-weight: 500;
         }
 
-        .language-nav a:hover {
+        .app-desc {
+            color: #334155;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .tag {
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .app-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .btn-playstore {
+            background-color: var(--accent-green);
+            color: #ffffff;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25);
+        }
+
+        .btn-playstore:hover {
+            background-color: var(--accent-green-hover);
+            box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
+        }
+
+        .btn-secondary {
+            background-color: #f1f5f9;
+            color: #334155;
+        }
+
+        .btn-secondary:hover {
+            background-color: #e2e8f0;
+            color: #0f172a;
+        }
+
+        .btn-disabled {
+            background-color: #f1f5f9;
+            color: #94a3b8;
+            cursor: not-allowed;
+            box-shadow: none;
+            border: 1px solid #e2e8f0;
+        }
+
+        .app-card.in-development {
+            position: relative;
+            background: #fbfcfe;
+            border: 1.5px dashed #cbd5e1;
+        }
+
+        .app-card.in-development:hover {
+            transform: none;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+            border-color: #cbd5e1;
+        }
+
+        .app-card.in-development .card-content {
+            opacity: 0.55;
+            filter: grayscale(20%);
+        }
+
+        .notice-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff7ed;
+            color: #c2410c;
+            border: 1px solid #fed7aa;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            margin-bottom: 14px;
+            width: fit-content;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 32px 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
             text-decoration: underline;
         }
     </style>
@@ -87,139 +268,84 @@
 
 <body>
     <div class="container">
-        <div class="language-nav">
-            <a href="#english">🇬🇧 English</a>
-            <a href="#vietnamese">🇻🇳 Tiếng Việt</a>
-        </div>
+        <header>
+            <div class="brand-badge">Developer Portfolio</div>
+            <h1>MHung <span>Applications</span></h1>
+            <p class="subtitle">Khám phá các ứng dụng di động tiện ích, bảo mật và dễ sử dụng trên nền tảng Android.</p>
+        </header>
 
-        <a href="https://play.google.com/store/apps/details?id=com.mhung.app.qr_scan" class="app-link" target="_blank" rel="noopener noreferrer">
-            📱 Tải ứng dụng trên Google Play (Download on Google Play)
-        </a>
+        <main class="apps-grid">
+            <!-- App 1: QR Code Scanner -->
+            <div class="app-card">
+                <div>
+                    <div class="app-header">
+                        <img src="https://play-lh.googleusercontent.com/RiF4AOVUfk-13P2pJ3VuqWbBbsHvO6aDSoThrhQW8lfijeXOCAxfactH1qrh9IvZnZEkghjawPM_uih5kd-Olg=w480-h960-rw" alt="QR Code Scanner Icon" class="app-icon">
+                        <div class="app-title-group">
+                            <h2>QR Code Scanner</h2>
+                            <span class="app-category">Tiện ích / Tools & Productivity</span>
+                        </div>
+                    </div>
+                    <p class="app-desc">
+                        Ứng dụng quét mã QR và mã vạch siêu nhanh, hỗ trợ tạo mã QR offline hoàn toàn cục bộ. Bảo mật tối đa, không thu thập dữ liệu cá nhân.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">⚡ Quét siêu tốc</span>
+                        <span class="tag">🔒 Offline & Bảo mật</span>
+                        <span class="tag">🛠️ Tạo mã QR</span>
+                    </div>
+                </div>
 
-        <!-- English Version -->
-        <div id="english">
-            <h1>Privacy Policy</h1>
-            <p class="last-updated">Effective Date / Last Updated: August 10, 2026</p>
+                <div class="app-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.mhung.app.qr_scan" target="_blank" rel="noopener noreferrer" class="btn btn-playstore">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.036 2.036 0 0 1-.22-.962V2.776c0-.361.08-.696.22-.962zm11.246 11.248l2.58 2.58-12.78 7.375 10.2-9.955zm0-2.124L4.655 1 17.435 8.375l-2.58 2.563zm1.488 1.488l3.197 1.847c.875.505.875 1.332 0 1.838l-3.197 1.847-2.316-2.316 2.316-2.216z"/></svg>
+                        Tải trên Google Play
+                    </a>
+                    <a href="./qrcode/privacy.html" class="btn btn-secondary">
+                        📄 Chính sách bảo mật (Privacy Policy)
+                    </a>
+                </div>
+            </div>
 
-            <p>This <strong>Privacy Policy</strong> describes how <strong>QR Code Scanner</strong> ("we", "us", or "our")
-                handles your information when you use our mobile application ("App"). Your privacy is critically important
-                to us.</p>
+            <!-- App 2: TingTing -->
+            <div class="app-card in-development">
+                <div>
+                    <div class="notice-badge">
+                        🚧 Đang phát triển phiên bản mới
+                    </div>
+                    <div class="card-content">
+                        <div class="app-header">
+                            <img src="https://play-lh.googleusercontent.com/DNrD9dMs0wqoF_rG1DbLtFU7024sfFaQfDifqxxtVU0gGllI-_5i1vwaFcvzkVNFaDuf0Fm4quTYTu_vwZ1htA=w480-h960-rw" alt="TingTing Icon" class="app-icon">
+                            <div class="app-title-group">
+                                <h2>TingTing</h2>
+                                <span class="app-category">Tài chính & Quản lý / Finance</span>
+                            </div>
+                        </div>
+                        <p class="app-desc">
+                            Trợ lý theo dõi và quản lý thông báo tài chính thông minh, hỗ trợ quản lý dòng tiền và các biến động số dư nhanh chóng, tiện lợi.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">💰 Quản lý thu chi</span>
+                            <span class="tag">🔔 Đọc thông báo</span>
+                            <span class="tag">📊 Báo cáo trực quan</span>
+                        </div>
+                    </div>
+                </div>
 
-            <h2>1. Information We Access and Collect</h2>
-            <p>Our App is designed to respect your data and privacy. We do not require account registration or collect
-                personally identifiable information (PII) such as your name, email address, phone number, or physical
-                address.</p>
-
-            <h3>Camera Access</h3>
-            <p>The App requests permission to access your device's camera solely to scan QR codes and barcodes in real-time.
-                Video streams from your camera are processed locally on your device and are never recorded, transmitted,
-                stored on external servers, or shared with third parties.</p>
-
-            <h3>Photo Library / Media Access & Storage Permission</h3>
-            <p>The App uses Android's native System Photo Picker to allow you to select images containing QR codes from your
-                device gallery for scanning. We only process the specific image file selected by you locally. Additionally, when
-                you use the QR Code Generation feature, the App may request permission to save the generated QR code images directly
-                into your device's photo gallery (`Pictures/QRScanner`). We do not scan, collect, or upload your photo library or your generated images.</p>
-
-            <h3>QR Code Generation</h3>
-            <p>When you create a QR code using our QR Code Generator feature, all input text and the resulting QR code image are processed entirely on your device (offline). We do not store, log, or transmit any text or QR content entered in the generator to any external server.</p>
-
-            <h3>Local Storage</h3>
-            <p>Scanned QR code results and your favorited items are stored locally on your device using a local Room
-                Database (`SQLite`). Generated QR codes are NOT saved into the app's local database. You can clear your scan history or delete items at any time through the App settings.
-            </p>
-
-            <h2>2. Use of Information</h2>
-            <p>All data processed by the App (camera feed, scanned QR contents, generated QR contents) remains entirely on your device. We use this
-                data exclusively to:</p>
-            <ul>
-                <li>Display scanned QR code text and links to you.</li>
-                <li>Generate QR code images locally based on text you provide.</li>
-                <li>Allow you to copy, share, or save scanned/generated QR codes locally on your device.</li>
-            </ul>
-
-            <h2>3. Third-Party Services and Analytics</h2>
-            <p>Our App does not sell, trade, or transfer any user data to third parties. We do not utilize third-party
-                tracking, profiling, or behavioral advertising SDKs.</p>
-
-            <h2>4. Data Retention and Deletion</h2>
-            <p>Since all data is stored strictly on your local device, uninstalling the App will automatically remove all
-                local database records and saved history.</p>
-
-            <h2>5. Children's Privacy</h2>
-            <p>Our App does not collect any personal information from anyone, including children under the age of 13. It is
-                safe for general audiences.</p>
-
-            <h2>6. Changes to This Privacy Policy</h2>
-            <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated
-                revision date.</p>
-
-            <h2>7. Contact Us</h2>
-            <p>If you have any questions or suggestions regarding this Privacy Policy, please feel free to contact us.</p>
-        </div>
-
-        <hr>
-
-        <!-- Vietnamese Version -->
-        <div id="vietnamese">
-            <h1>Chính sách bảo mật</h1>
-            <p class="last-updated">Ngày hiệu lực / Cập nhật lần cuối: 10 tháng 8, 2026</p>
-
-            <p><strong>Chính sách bảo mật</strong> này mô tả cách <strong>QR Code Scanner</strong> ("chúng tôi")
-                xử lý thông tin của bạn khi bạn sử dụng ứng dụng di động của chúng tôi ("Ứng dụng"). Quyền riêng tư của bạn 
-                là vô cùng quan trọng đối với chúng tôi.</p>
-
-            <h2>1. Thông tin chúng tôi truy cập và thu thập</h2>
-            <p>Ứng dụng của chúng tôi được thiết kế để tôn trọng dữ liệu và quyền riêng tư của bạn. Chúng tôi không yêu cầu 
-                đăng ký tài khoản hoặc thu thập thông tin nhận dạng cá nhân (PII) như tên, địa chỉ email, số điện thoại hoặc 
-                địa chỉ thực của bạn.</p>
-
-            <h3>Quyền truy cập Máy ảnh</h3>
-            <p>Ứng dụng yêu cầu quyền truy cập vào máy ảnh trên thiết bị của bạn chỉ để quét mã QR và mã vạch trong thời gian thực.
-                Luồng video từ máy ảnh của bạn được xử lý cục bộ trên thiết bị và không bao giờ được ghi lại, truyền đi,
-                lưu trữ trên các máy chủ bên ngoài hoặc chia sẻ với bên thứ ba.</p>
-
-            <h3>Quyền truy cập Thư viện ảnh / Phương tiện & Quyền lưu trữ</h3>
-            <p>Ứng dụng sử dụng Trình chọn ảnh hệ thống gốc của Android để cho phép bạn chọn hình ảnh chứa mã QR từ
-                thư viện thiết bị của bạn để quét. Chúng tôi chỉ xử lý tệp hình ảnh cụ thể do bạn chọn cục bộ. Ngoài ra, khi bạn sử dụng tính năng Tạo mã QR, Ứng dụng có thể yêu cầu quyền lưu hình ảnh mã QR đã tạo trực tiếp vào thư viện ảnh trên thiết bị của bạn (`Pictures/QRScanner`). Chúng tôi không quét, thu thập hoặc tải lên thư viện ảnh của bạn hoặc hình ảnh được tạo.</p>
-
-            <h3>Tạo Mã QR (QR Code Generation)</h3>
-            <p>Khi bạn tạo mã QR bằng tính năng Tạo mã QR của chúng tôi, tất cả văn bản đầu vào và hình ảnh mã QR kết quả đều được xử lý hoàn toàn trên thiết bị của bạn (ngoại tuyến/offline). Chúng tôi không lưu trữ, ghi nhật ký hoặc truyền bất kỳ văn bản hay nội dung QR nào đã nhập trong trình tạo đến bất kỳ máy chủ bên ngoài nào.</p>
-
-            <h3>Lưu trữ cục bộ</h3>
-            <p>Kết quả mã QR đã quét và các mục yêu thích của bạn được lưu trữ cục bộ trên thiết bị của bạn bằng cơ sở dữ liệu 
-                Room Database (`SQLite`) cục bộ. Các mã QR được tạo KHÔNG được lưu vào cơ sở dữ liệu cục bộ của ứng dụng. Bạn có thể xóa lịch sử quét hoặc xóa các mục bất kỳ lúc nào thông qua cài đặt Ứng dụng.
-            </p>
-
-            <h2>2. Sử dụng thông tin</h2>
-            <p>Tất cả dữ liệu do Ứng dụng xử lý (nguồn cấp dữ liệu máy ảnh, nội dung QR đã quét, nội dung QR đã tạo) hoàn toàn nằm trên thiết bị của bạn. 
-                Chúng tôi sử dụng dữ liệu này dành riêng cho việc:</p>
-            <ul>
-                <li>Hiển thị văn bản mã QR đã quét và các liên kết cho bạn.</li>
-                <li>Tạo hình ảnh mã QR cục bộ dựa trên văn bản bạn cung cấp.</li>
-                <li>Cho phép bạn sao chép, chia sẻ hoặc lưu các mã QR đã quét/đã tạo cục bộ trên thiết bị của bạn.</li>
-            </ul>
-
-            <h2>3. Dịch vụ của bên thứ ba và Phân tích</h2>
-            <p>Ứng dụng của chúng tôi không bán, trao đổi hoặc chuyển nhượng bất kỳ dữ liệu người dùng nào cho bên thứ ba. Chúng tôi 
-                không sử dụng SDK của bên thứ ba để theo dõi, lập hồ sơ hoặc quảng cáo theo hành vi.</p>
-
-            <h2>4. Lưu giữ và xóa dữ liệu</h2>
-            <p>Vì tất cả dữ liệu được lưu trữ chặt chẽ trên thiết bị cục bộ của bạn, nên việc gỡ cài đặt Ứng dụng sẽ tự động 
-                xóa tất cả các bản ghi cơ sở dữ liệu cục bộ và lịch sử đã lưu.</p>
-
-            <h2>5. Quyền riêng tư của trẻ em</h2>
-            <p>Ứng dụng của chúng tôi không thu thập bất kỳ thông tin cá nhân nào từ bất kỳ ai, bao gồm cả trẻ em dưới 13 tuổi. 
-                Ứng dụng an toàn cho mọi đối tượng.</p>
-
-            <h2>6. Thay đổi đối với Chính sách bảo mật này</h2>
-            <p>Chúng tôi có thể cập nhật Chính sách bảo mật của mình theo thời gian. Mọi thay đổi sẽ được đăng trên trang này 
-                với ngày sửa đổi được cập nhật.</p>
-
-            <h2>7. Liên hệ với chúng tôi</h2>
-            <p>Nếu bạn có bất kỳ câu hỏi hoặc đề xuất nào liên quan đến Chính sách bảo mật này, vui lòng liên hệ với chúng tôi.</p>
-        </div>
+                <div class="app-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.mhung.app.tingting" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.036 2.036 0 0 1-.22-.962V2.776c0-.361.08-.696.22-.962zm11.246 11.248l2.58 2.58-12.78 7.375 10.2-9.955zm0-2.124L4.655 1 17.435 8.375l-2.58 2.563zm1.488 1.488l3.197 1.847c.875.505.875 1.332 0 1.838l-3.197 1.847-2.316-2.316 2.316-2.216z"/></svg>
+                        Tải bản hiện tại trên Google Play
+                    </a>
+                </div>
+            </div>
+        </main>
     </div>
+
+    <footer>
+        <div class="container" style="padding: 0;">
+            <p>&copy; 2026 MHung. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
