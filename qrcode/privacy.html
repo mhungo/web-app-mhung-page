@@ -371,7 +371,7 @@
             <!-- ================= VIETNAMESE VERSION (PRIORITY / DEFAULT) ================= -->
             <div id="content-vi" class="lang-content active">
                 <div class="last-updated">
-                    📅 Ngày hiệu lực / Cập nhật lần cuối: <strong>10 tháng 8, 2026</strong>
+                    📅 Ngày hiệu lực / Cập nhật lần cuối: <strong>18 tháng 9, 2026</strong>
                 </div>
 
                 <p class="intro-text">
@@ -388,13 +388,20 @@
                     <p>Ứng dụng không thu thập thông tin nhận dạng cá nhân (PII) như họ tên, địa chỉ email, số điện thoại hoặc vị trí địa lý.</p>
 
                     <div class="section-box">
-                        <h3>📷 Quyền truy cập Máy ảnh (Camera)</h3>
-                        <p>Ứng dụng yêu cầu quyền máy ảnh chỉ nhằm mục đích quét mã QR và mã vạch trực tiếp trong thời gian thực. Luồng hình ảnh từ máy ảnh được xử lý tức thời ngay trên thiết bị và <strong>không bao giờ được ghi lại, truyền đi, hay lưu trữ</strong> trên máy chủ bên ngoài.</p>
+                        <h3>📷 Quyền truy cập Máy ảnh (Camera) & Quét Mã Vạch Sản Phẩm</h3>
+                        <p>Ứng dụng yêu cầu quyền máy ảnh chỉ nhằm mục đích quét mã QR và các loại mã vạch sản phẩm (EAN-13, EAN-8, UPC, Code 128, ITF, v.v.) trực tiếp trong thời gian thực.</p>
+                        <p>Luồng hình ảnh từ máy ảnh được xử lý tức thời ngay trên thiết bị và <strong>không bao giờ được ghi lại, truyền đi, hay lưu trữ</strong> trên máy chủ bên ngoài.</p>
+                    </div>
+
+                    <div class="section-box">
+                        <h3>🔍 Tra cứu Thông tin Sản phẩm từ Mã Vạch (Product Lookup)</h3>
+                        <p>Khi bạn quét mã vạch sản phẩm, mã số sản phẩm được nhận diện hoàn toàn trên thiết bị của bạn. Nếu bạn chọn tính năng tra cứu thông tin sản phẩm (như tìm kiếm thông tin hàng hóa, so sánh giá qua trình duyệt hoặc công cụ tìm kiếm), ứng dụng chỉ thực hiện điều hướng theo yêu cầu trực tiếp của bạn.</p>
+                        <p>Chúng tôi <strong>không theo dõi, ghi nhật ký hay thu thập</strong> thông tin về các sản phẩm bạn đã quét hoặc lịch sử mua sắm của bạn.</p>
                     </div>
 
                     <div class="section-box">
                         <h3>🖼️ Quyền truy cập Thư viện ảnh / Phương tiện & Lưu trữ</h3>
-                        <p>Ứng dụng sử dụng Trình chọn ảnh hệ thống gốc của Android (Photo Picker) để cho phép bạn chọn ảnh có mã QR từ thư viện để quét. Chúng tôi chỉ giải mã hình ảnh cụ thể mà bạn đã chọn trực tiếp trên máy.</p>
+                        <p>Ứng dụng sử dụng Trình chọn ảnh hệ thống gốc của Android (Photo Picker) để cho phép bạn chọn ảnh có mã QR hoặc mã vạch từ thư viện để quét. Chúng tôi chỉ giải mã hình ảnh cụ thể mà bạn đã chọn trực tiếp trên máy.</p>
                         <p>Khi bạn sử dụng tính năng <strong>Tạo mã QR</strong>, ứng dụng có thể yêu cầu quyền lưu ảnh đã tạo vào thư viện (thư mục <code>Pictures/QRScanner</code>). Chúng tôi không quét, không thu thập và không tải lên bất kỳ hình ảnh nào trong thư viện của bạn.</p>
                     </div>
 
@@ -405,7 +412,7 @@
 
                     <div class="section-box">
                         <h3>💾 Lưu trữ cục bộ (Local Database)</h3>
-                        <p>Lịch sử các mã QR đã quét và danh sách mục yêu thích được lưu cục bộ trong cơ sở dữ liệu Room Database (<code>SQLite</code>) trên máy bạn. Các mã QR bạn tự tạo KHÔNG bị lưu tự động vào cơ sở dữ liệu. Bạn có thể xóa lịch sử hoặc từng mục bất kỳ lúc nào trong cài đặt của ứng dụng.</p>
+                        <p>Lịch sử các mã QR / mã vạch đã quét và danh sách mục yêu thích được lưu cục bộ trong cơ sở dữ liệu Room Database (<code>SQLite</code>) trên máy bạn. Các mã QR bạn tự tạo KHÔNG bị lưu tự động vào cơ sở dữ liệu. Bạn có thể xóa lịch sử hoặc từng mục bất kỳ lúc nào trong cài đặt của ứng dụng.</p>
                     </div>
                 </div>
 
@@ -413,9 +420,10 @@
                     <h2>2. Mục đích sử dụng thông tin</h2>
                     <p>Tất cả dữ liệu được xử lý trong ứng dụng hoàn toàn nằm lại trên thiết bị của bạn nhằm phục vụ các tính năng:</p>
                     <ul>
-                        <li>Hiển thị văn bản, liên kết và nội dung mã QR sau khi quét.</li>
+                        <li>Hiển thị văn bản, liên kết và chi tiết mã vạch sản phẩm sau khi quét.</li>
+                        <li>Hỗ trợ tìm kiếm, tra cứu thông tin sản phẩm khi có yêu cầu từ người dùng.</li>
                         <li>Tạo hình ảnh mã QR offline dựa trên nội dung bạn nhập.</li>
-                        <li>Cho phép bạn sao chép, chia sẻ hoặc lưu mã QR trực tiếp trên thiết bị.</li>
+                        <li>Cho phép bạn sao chép, chia sẻ hoặc lưu mã QR / mã vạch trực tiếp trên thiết bị.</li>
                     </ul>
                 </div>
 
@@ -448,7 +456,7 @@
             <!-- ================= ENGLISH VERSION ================= -->
             <div id="content-en" class="lang-content">
                 <div class="last-updated">
-                    📅 Effective Date / Last Updated: <strong>August 10, 2026</strong>
+                    📅 Effective Date / Last Updated: <strong>September 18, 2026</strong>
                 </div>
 
                 <p class="intro-text">
@@ -465,13 +473,20 @@
                     <p>Our App is designed to respect your data and privacy. We do not collect personally identifiable information (PII) such as your name, email address, phone number, or physical location.</p>
 
                     <div class="section-box">
-                        <h3>📷 Camera Access</h3>
-                        <p>The App requests permission to access your device's camera solely to scan QR codes and barcodes in real-time. Video streams from your camera are processed locally on your device and are <strong>never recorded, transmitted, stored on external servers, or shared</strong> with third parties.</p>
+                        <h3>📷 Camera Access & Product Barcode Scanning</h3>
+                        <p>The App requests permission to access your device's camera solely to scan QR codes and product barcodes (EAN-13, EAN-8, UPC, Code 128, ITF, etc.) in real-time.</p>
+                        <p>Video streams from your camera are processed locally on your device and are <strong>never recorded, transmitted, stored on external servers, or shared</strong> with third parties.</p>
+                    </div>
+
+                    <div class="section-box">
+                        <h3>🔍 Product Barcode Lookup</h3>
+                        <p>When you scan a product barcode, the numerical/barcode data is decoded strictly on your local device. If you choose to search for product details, prices, or specifications via web search or external browsers, the query is performed solely at your explicit request.</p>
+                        <p>We <strong>do not track, log, or collect</strong> any data regarding the products you scan or your purchasing habits.</p>
                     </div>
 
                     <div class="section-box">
                         <h3>🖼️ Photo Library / Media Access & Storage Permission</h3>
-                        <p>The App uses Android's native System Photo Picker to allow you to select images containing QR codes from your device gallery for scanning. We only process the specific image file selected by you locally.</p>
+                        <p>The App uses Android's native System Photo Picker to allow you to select images containing QR codes or barcodes from your device gallery for scanning. We only process the specific image file selected by you locally.</p>
                         <p>When you use the <strong>QR Code Generation</strong> feature, the App may request permission to save the generated QR code images directly into your photo gallery (<code>Pictures/QRScanner</code>). We do not scan, collect, or upload your photo library or your generated images.</p>
                     </div>
 
@@ -482,7 +497,7 @@
 
                     <div class="section-box">
                         <h3>💾 Local Storage</h3>
-                        <p>Scanned QR code results and your favorited items are stored locally on your device using a local Room Database (<code>SQLite</code>). Generated QR codes are NOT saved into the app's local database. You can clear your scan history or delete items at any time through the App settings.</p>
+                        <p>Scanned QR code and barcode results along with your favorited items are stored locally on your device using a local Room Database (<code>SQLite</code>). Generated QR codes are NOT saved into the app's local database. You can clear your scan history or delete items at any time through the App settings.</p>
                     </div>
                 </div>
 
@@ -490,9 +505,10 @@
                     <h2>2. Use of Information</h2>
                     <p>All data processed by the App remains entirely on your device. We use this data exclusively to:</p>
                     <ul>
-                        <li>Display scanned QR code text and links to you.</li>
+                        <li>Display scanned QR code and product barcode text/details to you.</li>
+                        <li>Facilitate product lookup actions initiated by you.</li>
                         <li>Generate QR code images locally based on text you provide.</li>
-                        <li>Allow you to copy, share, or save scanned/generated QR codes locally on your device.</li>
+                        <li>Allow you to copy, share, or save scanned/generated codes locally on your device.</li>
                     </ul>
                 </div>
 
