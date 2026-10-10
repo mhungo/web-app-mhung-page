@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chính sách bảo mật - TingTing (Privacy Policy)</title>
+    <meta name="description" content="Chính sách bảo mật của ứng dụng TingTing - Trợ lý Tài chính & Đa tiện ích thông minh. Cam kết bảo vệ dữ liệu cá nhân, lưu trữ cục bộ an toàn, minh bạch quyền hạn.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0d9488;
+            --primary-dark: #0f766e;
+            --primary-light: #ccfbf1;
+            --primary-glow: rgba(13, 148, 136, 0.15);
+            --secondary: #0284c7;
+            --secondary-light: #e0f2fe;
+            --accent-green: #10b981;
+            --accent-amber: #f59e0b;
+            --text-main: #0f172a;
+            --text-secondary: #334155;
+            --text-muted: #64748b;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border: #e2e8f0;
+            --border-highlight: #cbd5e1;
+            --radius-lg: 20px;
+            --radius-md: 12px;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.05), 0 8px 10px -6px rgba(15, 23, 42, 0.03);
+            --shadow-hover: 0 20px 30px -10px rgba(13, 148, 136, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.75;
+            color: var(--text-main);
+            background-color: var(--bg-page);
+            padding: 32px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        /* Top Navigation Bar */
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .back-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 10px 18px;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+        }
+
+        .back-nav a:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            background: var(--primary-light);
+            transform: translateX(-2px);
+        }
+
+        .top-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* Language Toggle Tabs */
+        .lang-switch {
+            display: flex;
+            background: #e2e8f0;
+            padding: 4px;
+            border-radius: 12px;
+            gap: 4px;
+        }
+
+        .lang-btn {
+            border: none;
+            background: transparent;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lang-btn.active {
+            background: #ffffff;
+            color: var(--primary-dark);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        /* App Hero Header */
+        .app-hero {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 36px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #0d9488 0%, #0284c7 50%, #10b981 100%);
+        }
+
+        .hero-left {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .app-icon {
+            width: 82px;
+            height: 82px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(13, 148, 136, 0.2);
+            flex-shrink: 0;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            background: #f8fafc;
+        }
+
+        .hero-title h1 {
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--text-main);
+            line-height: 1.25;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-title .app-name {
+            font-size: 0.95rem;
+            color: var(--primary-dark);
+            font-weight: 700;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 8px;
+            background: #f1f5f9;
+            color: #475569;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .badge-secure {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+        }
+
+        .badge-cloud {
+            background: var(--secondary-light);
+            color: var(--secondary);
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 14px rgba(13, 148, 136, 0.35);
+            transition: all 0.2s ease;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(13, 148, 136, 0.45);
+        }
+
+        /* Search & Filter Bar */
+        .search-box-container {
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 20px 14px 46px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            background: #ffffff;
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px var(--primary-glow);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+        }
+
+        /* Quick Navigation (Table of Contents) */
+        .toc-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin-bottom: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .toc-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 8px 16px;
+        }
+
+        .toc-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: all 0.15s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-link:hover {
+            color: var(--primary-dark);
+            background: var(--primary-light);
+        }
+
+        /* Policy Main Content Card */
+        .content-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 44px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 28px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .intro-text {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            line-height: 1.85;
+        }
+
+        /* Highlight & Key Callout Boxes */
+        .highlight-box {
+            background: #f0fdfa;
+            border-left: 4px solid var(--primary);
+            padding: 20px 24px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 24px 0;
+            color: #134e4a;
+        }
+
+        .highlight-box h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .alert-box {
+            background: #eff6ff;
+            border-left: 4px solid var(--secondary);
+            padding: 18px 22px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 20px 0;
+            color: #1e3a8a;
+        }
+
+        .policy-section {
+            margin-bottom: 38px;
+            scroll-margin-top: 24px;
+        }
+
+        .policy-section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -0.3px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 8px;
+        }
+
+        .section-box {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            margin-bottom: 18px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section-box:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            line-height: 1.75;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul, ol {
+            padding-left: 22px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        /* Permissions Table */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            text-align: left;
+            background: #ffffff;
+        }
+
+        th {
+            background: #f1f5f9;
+            color: var(--text-main);
+            font-weight: 700;
+            padding: 14px 16px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #f8fafc;
+        }
+
+        .perm-tag {
+            display: inline-block;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            background: #f1f5f9;
+            color: #0f172a;
+            font-size: 0.8rem;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+        }
+
+        .perm-optional {
+            background: #ecfdf5;
+            color: #065f46;
+            font-weight: 600;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+
+        .perm-required {
+            background: #fef2f2;
+            color: #991b1b;
+            font-weight: 600;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%);
+            border: 1px solid #ccfbf1;
+            border-radius: var(--radius-md);
+            padding: 24px 28px;
+            margin-top: 20px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 14px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #ffffff;
+            padding: 12px 16px;
+            border-radius: 10px;
+            border: 1px solid rgba(13, 148, 136, 0.15);
+        }
+
+        .contact-item a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Language display toggle */
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        /* Print Style */
+        @media print {
+            body {
+                background: #ffffff;
+                color: #000000;
+                padding: 0;
+            }
+            .top-bar, .btn-download, .search-box-container, .toc-card {
+                display: none !important;
+            }
+            .content-card, .app-hero {
+                border: none;
+                box-shadow: none;
+                padding: 0;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .app-hero {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 26px 20px;
+            }
+
+            .hero-left {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .btn-download {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .content-card {
+                padding: 26px 20px;
+            }
+
+            .top-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .top-actions {
+                justify-content: space-between;
+            }
+
+            .lang-switch {
+                flex: 1;
+                justify-content: center;
+            }
+
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Top Navigation Bar -->
+        <div class="top-bar">
+            <div class="back-nav">
+                <a href="../index.html" id="btn-back">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    <span>Trang chủ / Home Portfolio</span>
+                </a>
+            </div>
+
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-vi" onclick="switchLanguage('vi')">🇻🇳 Tiếng Việt</button>
+                <button class="lang-btn" id="btn-en" onclick="switchLanguage('en')">🇬🇧 English</button>
+            </div>
+        </div>
+
+        <!-- App Hero Header -->
+        <div class="app-hero">
+            <div class="hero-left">
+                <img src="https://play-lh.googleusercontent.com/DNrD9dMs0wqoF_rG1DbLtFU7024sfFaQfDifqxxtVU0gGllI-_5i1vwaFcvzkVNFaDuf0Fm4quTYTu_vwZ1htA=w480-h960-rw" alt="TingTing Logo" class="app-icon" onerror="this.src='https://ui-avatars.com/api/?name=Ting+Ting&background=0d9488&color=fff&size=128'">
+                <div class="hero-title">
+                    <span class="app-name">TingTing App</span>
+                    <h1 id="hero-heading">Chính sách bảo mật</h1>
+                    <div class="hero-badges">
+                        <span class="badge badge-secure">🛡️ Lưu trữ 100% Cục bộ (Local-First)</span>
+                        <span class="badge">🔐 Khóa Vân tay & Face ID</span>
+                        <span class="badge badge-cloud">☁️ Google Drive AppData (Tùy chọn)</span>
+                        <span class="badge">🚫 Không thu thập PII</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://play.google.com/store/apps/details?id=com.mhung.app.tingting" target="_blank" rel="noopener noreferrer" class="btn-download" id="hero-cta-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.036 2.036 0 0 1-.22-.962V2.776c0-.361.08-.696.22-.962zm11.246 11.248l2.58 2.58-12.78 7.375 10.2-9.955zm0-2.124L4.655 1 17.435 8.375l-2.58 2.563zm1.488 1.488l3.197 1.847c.875.505.875 1.332 0 1.838l-3.197 1.847-2.316-2.316 2.316-2.216z"/></svg>
+                <span>Tải trên Google Play</span>
+            </a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-box-container">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+            <input type="text" id="policy-search" class="search-input" placeholder="Tìm kiếm nhanh trong chính sách (ví dụ: Google Drive, vị trí, vân tay, sao lưu, xóa dữ liệu)..." oninput="handleSearch(this.value)">
+        </div>
+
+        <!-- Quick Table of Contents -->
+        <div class="toc-card" id="toc-container">
+            <div class="toc-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                <span id="toc-heading">Mục lục điều hướng nhanh</span>
+            </div>
+            <div class="toc-grid" id="toc-links">
+                <!-- Injected via JavaScript based on active language -->
+            </div>
+        </div>
+
+        <!-- Main Content Card -->
+        <div class="content-card">
+            <!-- ================================================================= -->
+            <!-- ================= VIETNAMESE VERSION (MẶC ĐỊNH) ================= -->
+            <!-- ================================================================= -->
+            <div id="content-vi" class="lang-content active">
+                <div class="last-updated">
+                    <div>📅 Ngày hiệu lực / Cập nhật lần cuối: <strong>10 tháng 10, 2026</strong></div>
+                </div>
+
+                <p class="intro-text">
+                    Chào mừng bạn đến với <strong>TingTing</strong> ("chúng tôi", "ứng dụng") – bộ ứng dụng trợ lý tài chính cá nhân và đa tiện ích thông minh (Quản lý chi tiêu, sổ tay ghi chú, đọc sách EPUB, dự báo thời tiết, tra cứu vi phạm giao thông, kết quả xổ số, âm lịch và tiện ích đa phương tiện). Chúng tôi hiểu rằng thông tin tài chính và dữ liệu sinh hoạt cá nhân là điều cực kỳ nhạy cảm và riêng tư. <strong>Chính sách bảo mật</strong> này mô tả chi tiết, minh bạch cách thức TingTing thu thập, lưu trữ, sử dụng và bảo vệ dữ liệu khi bạn cài đặt và trải nghiệm ứng dụng.
+                </p>
+
+                <div class="highlight-box">
+                    <h4>💡 Cam kết cốt lõi: Kiến trúc ưu tiên cục bộ (Local-First Architecture)</h4>
+                    <p>Toàn bộ dữ liệu thu chi, hạn mức ngân sách, ghi chú cá nhân, dấu trang đọc sách và lịch sử sử dụng của bạn được <strong>lưu trữ 100% trên thiết bị của chính bạn</strong> trong cơ sở dữ liệu SQLite cục bộ. Chúng tôi <strong>không có máy chủ trung gian</strong> để lữu trữ hay theo dõi các giao dịch tài chính của bạn, không bán dữ liệu và không theo dõi hành vi người dùng vì mục đích quảng cáo.</p>
+                </div>
+
+                <!-- SECTION 1 -->
+                <div class="policy-section" id="sec-vi-1">
+                    <h2>1. Chi tiết cách thức xử lý dữ liệu theo từng tính năng</h2>
+                    <p>Dưới đây là mô tả chi tiết về cách dữ liệu được xử lý trong từng phân hệ chức năng của TingTing:</p>
+
+                    <!-- 1.1 Expenses -->
+                    <div class="section-box">
+                        <h3>💰 1.1 Quản lý Thu chi & Tài chính cá nhân (Personal Finance)</h3>
+                        <p><strong>Dữ liệu liên quan:</strong> Số tiền giao dịch (thu, chi, chuyển khoản), ngày giờ, danh mục chi tiêu, tài khoản/ví tiền, ngân sách hàng tháng, giao dịch định kỳ (tiền nhà, hóa đơn, lương) và ghi chú giao dịch.</p>
+                        <p><strong>Cơ chế lưu trữ:</strong> Toàn bộ dữ liệu này được ghi trực tiếp vào cơ sở dữ liệu SQLite nội bộ (<code>expense_database</code>) nằm trong vùng nhớ ứng dụng riêng biệt (Sandbox) của điện thoại. Không có bất kỳ bản ghi tài chính nào được tự động gửi qua Internet đến máy chủ của chúng tôi hoặc bên thứ ba.</p>
+                        <p><strong>Khóa bảo mật ứng dụng (Mã PIN & Sinh trắc học):</strong></p>
+                        <ul>
+                            <li>Ứng dụng hỗ trợ thiết lập mã PIN (Passcode) và mở khóa bằng sinh trắc học (Vân tay / Face ID).</li>
+                            <li>Quá trình xác thực sinh trắc học được ủy quyền trực tiếp cho hệ điều hành (Android Biometric API / iOS LocalAuthentication) và phần cứng bảo mật độc lập của máy (Secure Enclave / Trusted Execution Environment).</li>
+                            <li>TingTing <strong>hoàn toàn không thể xem, đọc, lưu trữ hoặc trích xuất</strong> dữ liệu vân tay hay nhận diện khuôn mặt của bạn. Ứng dụng chỉ nhận được kết quả xác thực thành công hay thất bại từ hệ điều hành.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 1.2 Backup -->
+                    <div class="section-box">
+                        <h3>☁️ 1.2 Sao lưu & Khôi phục dữ liệu (Local & Google Drive Cloud Backup)</h3>
+                        <p>Để đảm bảo người dùng không bị mất dữ liệu khi đổi thiết bị, TingTing cung cấp 2 phương thức sao lưu hoàn toàn do người dùng chủ động điều khiển:</p>
+                        <ul>
+                            <li><strong>Sao lưu cục bộ (Local File Backup):</strong> Tạo tệp dữ liệu dạng <code>.json</code> hoặc sao chép bản ghi cơ sở dữ liệu để bạn lưu vào bộ nhớ máy, thẻ nhớ hoặc chia sẻ sang ứng dụng khác.</li>
+                            <li><strong>Sao lưu đám mây Google Drive (Cloud Backup):</strong>
+                                <br>Khi bạn chủ động kích hoạt tính năng Sao lưu Google Drive trong phần Cài đặt:
+                                <ol style="margin-top: 6px;">
+                                    <li>Ứng dụng yêu cầu đăng nhập tài khoản Google thông qua dịch vụ Google Sign-In chính thức.</li>
+                                    <li>Ứng dụng <strong>chỉ yêu cầu quyền hạn giới hạn duy nhất</strong>: <code>https://www.googleapis.com/auth/drive.appdata</code> (Thư mục dữ liệu ứng dụng ẩn trên Google Drive).</li>
+                                    <li><strong>Phạm vi truy cập giới hạn an toàn:</strong> Thư mục AppData là một không gian tách biệt hoàn toàn. TingTing <strong>KHÔNG CÓ QUYỀN</strong> xem, mở, chỉnh sửa, xóa hoặc truy cập vào bất kỳ tệp tin, hình ảnh, tài liệu hay thư mục cá nhân nào khác trên Google Drive của bạn.</li>
+                                    <li><strong>Tuân thủ chính sách người dùng của Google:</strong> Việc ứng dụng sử dụng và chuyển thông tin nhận được từ Google API sang bất kỳ ứng dụng nào khác sẽ tuân thủ <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Chính sách dữ liệu người dùng của Dịch vụ Google API</a>, bao gồm các yêu cầu về Sử dụng có giới hạn (Limited Use requirements).</li>
+                                    <li>Mọi thao tác tải lên và tải xuống tệp sao lưu đều được mã hóa bằng giao thức HTTPS/TLS bảo mật cao. Bạn có thể đăng xuất khỏi Google Drive hoặc hủy liên kết ứng dụng bất kỳ lúc nào tại giao diện Cài đặt hoặc trong phần quản lý tài khoản Google của bạn.</li>
+                                </ol>
+                            </li>
+                            <li><strong>Xuất báo cáo PDF & CSV:</strong> Cho phép xuất bảng kê giao dịch và báo cáo tài chính ra định dạng tệp CSV hoặc tài liệu in PDF trực tiếp trên thiết bị để bạn lưu trữ hoặc in ấn.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 1.3 Notes -->
+                    <div class="section-box">
+                        <h3>📝 1.3 Sổ tay Ghi chú Cá nhân (Notes & Rich Text)</h3>
+                        <p><strong>Dữ liệu liên quan:</strong> Tiêu đề ghi chú, nội dung văn bản phong phú (hỗ trợ định dạng), màu sắc thẻ, danh mục phân loại nhóm ghi chú.</p>
+                        <p><strong>Cơ chế:</strong> Lưu trữ cục bộ hoàn toàn trên máy bằng SharedPreferences / tệp lưu trữ nội bộ. Ứng dụng không đồng bộ hay gửi ghi chú của bạn ra bên ngoài, đảm bảo sự riêng tư tuyệt đối cho nhật ký và ý tưởng của bạn.</p>
+                    </div>
+
+                    <!-- 1.4 EPUB Reader & Wi-Fi Server -->
+                    <div class="section-box">
+                        <h3>📚 1.4 Đọc Sách Điện Tử EPUB & Máy chủ Tải sách qua Wi-Fi Cục bộ</h3>
+                        <p><strong>Đọc sách & Thống kê:</strong> Các tệp sách điện tử (<code>.epub</code>), vị trí trang đang đọc, đánh dấu trang (bookmark), đoạn trích tô màu (highlight) và thời gian đọc sách đều được quản lý ngoại tuyến trong cơ sở dữ liệu SQLite cục bộ (<code>epub_database</code>).</p>
+                        <p><strong>Tính năng Máy chủ tải sách qua Wi-Fi (Local Wi-Fi Server):</strong></p>
+                        <ul>
+                            <li>TingTing tích hợp một máy chủ HTTP cục bộ gọn nhẹ (sử dụng thư viện Shelf) cho phép bạn chuyển sách từ trình duyệt máy tính cá nhân sang điện thoại qua mạng Wi-Fi gia đình (cổng nội bộ 8080).</li>
+                            <li><strong>Bản chất mạng nội bộ (LAN Only):</strong> Toàn bộ quá trình truyền tệp diễn ra trực tiếp ngang hàng (Peer-to-Peer) giữa máy tính và điện thoại của bạn trong cùng một mạng Wi-Fi cục bộ.</li>
+                            <li><strong>Không truyền qua Internet:</strong> Tệp sách KHÔNG BAO GIỜ đi qua Internet hay bất kỳ máy chủ bên ngoài nào.</li>
+                            <li>Máy chủ Wi-Fi chỉ hoạt động tạm thời khi bạn chủ động mở trang "Tải sách qua Wi-Fi" và tự động tắt hoàn toàn ngay khi bạn rời khỏi màn hình.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 1.5 TikTok Downloader -->
+                    <div class="section-box">
+                        <h3>🎬 1.5 Tải Video TikTok Tiện ích (TikTok Downloader)</h3>
+                        <p><strong>Cách thức hoạt động:</strong> Người dùng dán đường dẫn (URL) của video công khai trên TikTok vào ứng dụng. Ứng dụng gửi yêu cầu đến các giao diện lập trình mở (API công khai) để lấy liên kết tệp video chất lượng cao không gắn logo.</p>
+                        <p><strong>Cam kết bảo mật & Quyền riêng tư:</strong></p>
+                        <ul>
+                            <li>Ứng dụng <strong>KHÔNG yêu cầu đăng nhập tài khoản TikTok</strong> và KHÔNG BAO GIỜ thu thập tên đăng nhập, mật khẩu, cookie hay danh tính của bạn trên TikTok.</li>
+                            <li>Không theo dõi lịch sử xem, lịch sử tìm kiếm hay hành vi duyệt web TikTok của bạn.</li>
+                            <li>Tệp video sau khi tải được lưu trực tiếp vào bộ nhớ máy / Bộ sưu tập hình ảnh (Gallery) của bạn thông qua thư viện hỗ trợ truyền thông chính quy (Gal).</li>
+                        </ul>
+                    </div>
+
+                    <!-- 1.6 Traffic Fine -->
+                    <div class="section-box">
+                        <h3>🚦 1.6 Tra cứu Phạt Nguội Vi Phạm Giao Thông (Traffic Fine Lookup)</h3>
+                        <p><strong>Cách thức hoạt động:</strong> Người dùng nhập biển số xe và lựa chọn loại phương tiện (Ô tô, Xe máy, Xe máy điện) để tra cứu thông tin vi phạm giao thông công khai từ hệ thống dữ liệu vi phạm đường bộ.</p>
+                        <p><strong>Xử lý dữ liệu:</strong> Yêu cầu tra cứu được truyền tải bảo mật qua giao thức HTTPS và được bảo vệ bằng chữ ký số HMAC-SHA256 nhằm ngăn chặn giả mạo thông tin. TingTing không thu thập thông tin cá nhân của chủ phương tiện, không tra cứu thông tin căn cước công dân và không lưu vết lộ trình di chuyển của xe.</p>
+                    </div>
+
+                    <!-- 1.7 Weather & Location -->
+                    <div class="section-box">
+                        <h3>⛅ 1.7 Dự báo Thời tiết & Quyền Vị trí Địa lý (Weather & Location)</h3>
+                        <p><strong>Tính năng:</strong> Hiển thị thông tin nhiệt độ, độ ẩm, sức gió, chỉ số UV, dự báo nhiều ngày, bản đồ mây vệ tinh và cảnh báo áp thấp/bão nhiệt đới.</p>
+                        <p><strong>Quyền truy cập vị trí (GPS Permission):</strong></p>
+                        <ul>
+                            <li>Ứng dụng chỉ yêu cầu quyền vị trí khi bạn bấm chọn "Thời tiết tại vị trí hiện tại". Chúng tôi chỉ yêu cầu mức độ chính xác tương đối/thấp (<code>LocationAccuracy.low</code>) đủ để xác định địa phương hoặc tỉnh/thành phố bạn đang sinh sống.</li>
+                            <li><strong>Không chạy ngầm:</strong> TingTing KHÔNG BAO GIỜ theo dõi vị trí dưới nền (No background tracking). Tọa độ GPS chỉ được đọc trong một khoảnh khắc khi bạn làm mới thời tiết.</li>
+                            <li><strong>Không lưu vết & Không bán dữ liệu:</strong> Ứng dụng không lưu lại lịch sử di chuyển (No location history) và tuyệt đối không chia sẻ tọa độ của bạn cho các đối tác quảng cáo.</li>
+                            <li><strong>Tùy chọn linh hoạt:</strong> Nếu bạn từ chối cấp quyền vị trí, ứng dụng vẫn hoạt động bình thường 100% bằng cách sử dụng định vị mạng IP ước lượng hoặc cho phép bạn tự tìm kiếm và chọn tỉnh/thành phố thủ công từ danh sách có sẵn.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 1.8 Lunar Calendar & Numerology -->
+                    <div class="section-box">
+                        <h3>🌙 1.8 Lịch Vạn Niên & Thần Số Học (Lunar Calendar & Numerology)</h3>
+                        <p><strong>Lịch Vạn Niên:</strong> Tra cứu lịch âm, ngày hoàng đạo/hắc đạo, giờ tốt, hướng xuất hành, đổi ngày dương sang âm. Thuật toán thiên văn âm lịch Việt Nam được tích hợp sẵn và chạy <strong>100% ngoại tuyến (Offline)</strong> ngay trên điện thoại của bạn, không cần kết nối Internet.</p>
+                        <p><strong>Thần số học Pitago:</strong> Người dùng có thể nhập họ tên và ngày sinh để xem phân tích các chỉ số đường đời, số sứ mệnh, số linh hồn. Toàn bộ thuật toán tính toán diễn ra tức thời trên máy. Dữ liệu ngày sinh và họ tên không bị lưu trữ vào hồ sơ đám mây và không bao giờ bị phát tán lên mạng.</p>
+                    </div>
+
+                    <!-- 1.9 Lottery & News & Gamification -->
+                    <div class="section-box">
+                        <h3>📰 1.9 Kết quả Xổ số, Tin tức Tổng hợp & Gamification</h3>
+                        <p><strong>Kết quả Xổ số:</strong> Ứng dụng chỉ tải dữ liệu kết quả XSKT ba miền và Vietlott công khai để hiển thị. Ứng dụng không ghi nhận vé số cá nhân hay thông tin đặt cược.</p>
+                        <p><strong>Tin tức Báo chí:</strong> Tải nội dung bài viết từ các cổng báo chí uy tín phục vụ nhu cầu đọc tin tức hàng ngày. Danh mục bài viết đánh dấu (Bookmarks) được lưu trên máy của bạn.</p>
+                        <p><strong>Hành trình thói quen (Gamification & Streaks):</strong> Ghi nhận số ngày bạn duy trì thói quen ghi chép tài chính và tích lũy điểm thưởng thành tích (EXP). Dữ liệu này được lưu cục bộ trong SQLite nhằm khuyến khích bạn quản lý tài chính kỷ luật hơn.</p>
+                    </div>
+                </div>
+
+                <!-- SECTION 2 -->
+                <div class="policy-section" id="sec-vi-2">
+                    <h2>2. Danh sách quyền hạn thiết bị & Mục đích sử dụng</h2>
+                    <p>TingTing tuân thủ nghiêm ngặt nguyên tắc tối thiểu hóa quyền hạn. Chúng tôi chỉ yêu cầu các quyền thực sự cần thiết để vận hành các tính năng cụ thể mà bạn muốn dùng:</p>
+
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Quyền hạn (Permission)</th>
+                                    <th>Phân loại</th>
+                                    <th>Mục đích sử dụng thực tế</th>
+                                    <th>Cách kiểm soát</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="perm-tag">INTERNET</span></td>
+                                    <td><span class="perm-required">Bắt buộc</span></td>
+                                    <td>Kết nối tải dữ liệu thời tiết, tin tức, kết quả xổ số, tra cứu phạt nguội, sao lưu Google Drive và tải video theo yêu cầu.</td>
+                                    <td>Mặc định theo hệ thống Android/iOS.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="perm-tag">USE_BIOMETRIC</span> / <span class="perm-tag">NSFaceIDUsageDescription</span></td>
+                                    <td><span class="perm-optional">Tùy chọn</span></td>
+                                    <td>Cho phép mở khóa ứng dụng bằng vân tay hoặc nhận diện khuôn mặt (Face ID) để bảo vệ sự riêng tư của sổ thu chi.</td>
+                                    <td>Bật hoặc tắt trong <em>Cài đặt &gt; Khóa ứng dụng</em>.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="perm-tag">ACCESS_COARSE_LOCATION</span> / <span class="perm-tag">ACCESS_FINE_LOCATION</span></td>
+                                    <td><span class="perm-optional">Tùy chọn</span></td>
+                                    <td>Xác định tọa độ khu vực hiện tại để hiển thị thông tin dự báo thời tiết địa phương chính xác. Không theo dõi ngầm.</td>
+                                    <td>Có thể từ chối và chọn tỉnh/thành thủ công từ danh sách.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="perm-tag">READ_MEDIA_VIDEO</span> / <span class="perm-tag">WRITE_EXTERNAL_STORAGE</span> / <span class="perm-tag">NSPhotoLibraryAddUsageDescription</span></td>
+                                    <td><span class="perm-optional">Tùy chọn</span></td>
+                                    <td>Lưu video TikTok hoặc ảnh được tải về vào Thư viện ảnh / Bộ sưu tập đa phương tiện của thiết bị.</td>
+                                    <td>Hệ điều hành sẽ hiển thị hộp thoại xin phép khi bạn bấm tải lần đầu.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="perm-tag">READ_EXTERNAL_STORAGE</span> / <span class="perm-tag">File Picker</span></td>
+                                    <td><span class="perm-optional">Tùy chọn</span></td>
+                                    <td>Cho phép bạn chọn tệp sách EPUB từ bộ nhớ máy để nhập vào kho sách, hoặc chọn tệp JSON để khôi phục dữ liệu thu chi.</td>
+                                    <td>Chỉ kích hoạt khi bạn bấm nút "Nhập tệp" trong ứng dụng.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="perm-tag">ACCESS_WIFI_STATE</span> / Mạng cục bộ (Local Network)</td>
+                                    <td><span class="perm-optional">Tùy chọn</span></td>
+                                    <td>Lấy địa chỉ IP nội bộ trong mạng LAN gia đình để hiển thị cho tính năng Máy chủ tải sách EPUB từ máy tính qua Wi-Fi.</td>
+                                    <td>Chỉ sử dụng khi bạn chủ động bật trang Tải sách Wi-Fi.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- SECTION 3 -->
+                <div class="policy-section" id="sec-vi-3">
+                    <h2>3. Dịch vụ bên thứ ba & Cam kết Không theo dõi</h2>
+                    <div class="alert-box">
+                        <strong>🚫 Cam kết Không quảng cáo theo dõi (No Behavioral Ad Tracking):</strong> TingTing không chứa các bộ công cụ theo dõi người dùng thương mại (như Facebook Pixel, AppsFlyer hay các mạng quảng cáo nhắm mục tiêu). Chúng tôi không kinh doanh dữ liệu cá nhân hay hồ sơ chi tiêu của bạn dưới bất kỳ hình thức nào.
+                    </div>
+                    <p>Ứng dụng chỉ tương tác với các nhà cung cấp dịch vụ hạ tầng cần thiết sau đây khi có yêu cầu từ tính năng:</p>
+                    <ul>
+                        <li><strong>Google Drive API (Google LLC):</strong> Chỉ được kích hoạt khi bạn đăng nhập tài khoản Google để thực hiện sao lưu dữ liệu thu chi vào thư mục AppData ẩn của chính ứng dụng. Tuân thủ tiêu chuẩn an toàn dữ liệu của Google.</li>
+                        <li><strong>Dịch vụ dữ liệu Thời tiết (Node Windy / Open Data):</strong> Nhận yêu cầu dự báo thời tiết theo tọa độ khu vực hoặc tên thành phố để trả về dữ liệu khí tượng. Không chứa thông tin định danh cá nhân.</li>
+                        <li><strong>Dịch vụ Tra cứu Phạt nguội công khai:</strong> Gửi truy vấn biển số xe qua giao thức HTTPS bảo mật để trả về danh sách vi phạm hành chính giao thông.</li>
+                        <li><strong>Nguồn tin tức báo chí công khai:</strong> Cung cấp các luồng tin thời sự để người dùng cập nhật thông tin xã hội trong ứng dụng.</li>
+                    </ul>
+                </div>
+
+                <!-- SECTION 4 -->
+                <div class="policy-section" id="sec-vi-4">
+                    <h2>4. Lưu giữ, Bảo mật & Xóa bỏ dữ liệu của bạn</h2>
+                    <p><strong>Cơ chế bảo mật kỹ thuật:</strong></p>
+                    <ul>
+                        <li>Dữ liệu trên máy bạn được bảo vệ bởi cơ chế cách ly ứng dụng (Application Sandboxing) của Android và iOS. Các ứng dụng khác trên điện thoại không thể tự ý truy cập vào cơ sở dữ liệu nội bộ của TingTing.</li>
+                        <li>Mã khóa ứng dụng và sinh trắc học cung cấp thêm một lớp bảo vệ vững chắc khi bạn cho người khác mượn điện thoại.</li>
+                        <li>Mọi kết nối mạng tra cứu đều sử dụng giao thức truyền thông mã hóa an toàn HTTPS/TLS 1.3.</li>
+                    </ul>
+
+                    <p><strong>Quyền xóa dữ liệu (Data Deletion):</strong></p>
+                    <ul>
+                        <li><strong>Xóa từng phần:</strong> Bạn có thể dễ dàng xóa từng giao dịch thu chi, xóa danh mục, xóa ghi chú cá nhân, xóa sách EPUB hoặc xóa lịch sử tải video bất cứ lúc nào ngay trong màn hình quản lý tương ứng.</li>
+                        <li><strong>Xóa toàn bộ dữ liệu trên thiết bị:</strong> Bạn chỉ cần gỡ cài đặt ứng dụng (Uninstall) hoặc vào phần <em>Cài đặt của điện thoại &gt; Ứng dụng &gt; TingTing &gt; Xóa bộ nhớ và dữ liệu (Clear Data)</em>. Toàn bộ cơ sở dữ liệu SQLite, ghi chú và cấu hình sẽ bị xóa vĩnh viễn khỏi máy ngay lập tức.</li>
+                        <li><strong>Xóa dữ liệu sao lưu trên Google Drive:</strong> Trong trang <em>Cài đặt sao lưu</em> của TingTing, bạn có thể bấm xóa bản sao lưu đám mây. Bạn cũng có thể vào trang quản lý tài khoản Google của mình (<a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a>) để thu hồi quyền truy cập và xóa dữ liệu ứng dụng TingTing bất cứ lúc nào.</li>
+                    </ul>
+                </div>
+
+                <!-- SECTION 5 -->
+                <div class="policy-section" id="sec-vi-5">
+                    <h2>5. Quyền riêng tư của trẻ em (Children's Privacy)</h2>
+                    <p>TingTing là ứng dụng công cụ tiện ích đa năng hướng đến người dùng đại chúng và không phục vụ riêng cho đối tượng trẻ em dưới 13 tuổi. Chúng tôi không cố ý thu thập bất kỳ thông tin nhận dạng cá nhân nào từ trẻ em. Vì ứng dụng hoạt động theo cơ chế lưu trữ cục bộ trên máy, ứng dụng tuyệt đối an toàn và lành mạnh cho mọi thành viên trong gia đình sử dụng.</p>
+                </div>
+
+                <!-- SECTION 6 -->
+                <div class="policy-section" id="sec-vi-6">
+                    <h2>6. Quyền của người dùng theo quy định pháp luật</h2>
+                    <p>Dù bạn ở Việt Nam, Liên minh Châu Âu (GDPR) hay bất kỳ quốc gia nào, bạn luôn được đảm bảo các quyền cơ bản đối với dữ liệu của mình:</p>
+                    <ul>
+                        <li><strong>Quyền được biết và minh bạch:</strong> Bạn có quyền biết chính xác dữ liệu nào đang được xử lý thông qua Chính sách bảo mật công khai này.</li>
+                        <li><strong>Quyền kiểm soát và sở hữu:</strong> Dữ liệu tài chính nằm trên máy bạn là tài sản của bạn. Bạn có toàn quyền xuất dữ liệu ra tệp CSV, PDF hoặc sao lưu bất cứ khi nào.</li>
+                        <li><strong>Quyền phản đối và thu hồi quyền:</strong> Bạn có quyền từ chối cấp quyền Vị trí, quyền Thư viện ảnh, quyền Sinh trắc học hoặc ngắt kết nối Google Drive mà không bị cản trở việc sử dụng các tính năng cơ bản khác.</li>
+                    </ul>
+                </div>
+
+                <!-- SECTION 7 -->
+                <div class="policy-section" id="sec-vi-7">
+                    <h2>7. Thay đổi và Cập nhật Chính sách</h2>
+                    <p>Chúng tôi có thể định kỳ điều chỉnh hoặc bổ sung Chính sách bảo mật này để phản ánh các cải tiến tính năng mới hoặc đáp ứng yêu cầu pháp lý cập nhật. Mọi thay đổi sẽ được công bố công khai trên trang web này kèm theo ngày cập nhật mới nhất ở đầu văn bản. Chúng tôi khuyến khích bạn xem lại trang này định kỳ để luôn nắm rõ các cam kết bảo mật của chúng tôi.</p>
+                </div>
+
+                <!-- SECTION 8 -->
+                <div class="policy-section" id="sec-vi-8">
+                    <h2>8. Thông tin Liên hệ</h2>
+                    <p>Nếu bạn có bất kỳ câu hỏi, thắc mắc, đề xuất cải tiến hoặc yêu cầu hỗ trợ nào liên quan đến Chính sách bảo mật hoặc bảo vệ dữ liệu trong ứng dụng TingTing, xin vui lòng liên hệ trực tiếp với chúng tôi qua thông tin sau:</p>
+
+                    <div class="contact-box">
+                        <strong style="font-size: 1.05rem; color: var(--primary-dark);">Bộ phận Phát triển Ứng dụng TingTing / MHung Apps</strong>
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">Email hỗ trợ chính thức:</div>
+                                    <a href="mailto:phamhung2015cb@gmail.com">phamhung2015cb@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                <div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">Trang danh mục ứng dụng:</div>
+                                    <a href="../index.html">MHung Apps Portfolio</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================================================================= -->
+            <!-- ==================== ENGLISH VERSION ============================ -->
+            <!-- ================================================================= -->
+            <div id="content-en" class="lang-content">
+                <div class="last-updated">
+                    <div>📅 Effective Date / Last Updated: <strong>October 10, 2026</strong></div>
+                </div>
+
+                <p class="intro-text">
+                    Welcome to <strong>TingTing</strong> ("we", "us", or "our") – your all-in-one personal finance assistant and smart lifestyle utility suite (Expense & Budget tracker, notes editor, EPUB reader, weather forecasts, traffic violation lookups, lottery results, lunar calendar, and media tools). We understand that financial data and personal lifestyle records are deeply private. This <strong>Privacy Policy</strong> clearly outlines how TingTing handles, stores, protects, and respects your data when you use our mobile application.
+                </p>
+
+                <div class="highlight-box">
+                    <h4>💡 Core Commitment: Local-First Privacy Architecture</h4>
+                    <p>All your transactions, budget limits, personal notes, reading progress, and usage history are <strong>stored 100% locally on your own device</strong> in a private SQLite database. We do <strong>NOT operate centralized servers</strong> to harvest, store, or monitor your personal financial records. We never sell your data and do not run behavioral tracking advertising SDKs.</p>
+                </div>
+
+                <!-- SECTION 1 EN -->
+                <div class="policy-section" id="sec-en-1">
+                    <h2>1. Detailed Feature-by-Feature Data Handling</h2>
+                    <p>Here is an exhaustive breakdown of how information is processed across each module within TingTing:</p>
+
+                    <!-- 1.1 Expenses EN -->
+                    <div class="section-box">
+                        <h3>💰 1.1 Personal Finance & Expense Tracking</h3>
+                        <p><strong>Data Involved:</strong> Transaction amounts (income, expense, transfer), timestamps, categories, accounts/wallets, monthly budgets, recurring transactions, and notes.</p>
+                        <p><strong>Storage Mechanism:</strong> All records are stored strictly in an encrypted/sandboxed local SQLite database (<code>expense_database</code>) on your device. No financial records are ever automatically transmitted over the Internet to our servers or third-party analytical platforms.</p>
+                        <p><strong>App Security Lock (Passcode & Biometrics):</strong></p>
+                        <ul>
+                            <li>The App supports custom PIN codes and Biometric authentication (Fingerprint / Face ID).</li>
+                            <li>Biometric validation is processed exclusively by the operating system (Android BiometricPrompt / iOS LocalAuthentication) and your device's isolated hardware security processor (Secure Enclave / TEE).</li>
+                            <li>TingTing <strong>never accesses, views, stores, or transmits</strong> your fingerprint or facial recognition data. We only receive a binary success or failure confirmation from the OS.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 1.2 Backup EN -->
+                    <div class="section-box">
+                        <h3>☁️ 1.2 Data Backup & Restoration (Local & Google Drive Cloud Backup)</h3>
+                        <p>To safeguard your records against device loss or replacement, TingTing provides two user-controlled backup options:</p>
+                        <ul>
+                            <li><strong>Local File Backup:</strong> Export your data into a structured <code>.json</code> file or database archive to store on your device storage, SD card, or share via trusted apps.</li>
+                            <li><strong>Google Drive Cloud Backup:</strong>
+                                <br>When you explicitly opt into Google Drive backup under Settings:
+                                <ol style="margin-top: 6px;">
+                                    <li>The app authenticates your Google account via official Google Sign-In SDKs.</li>
+                                    <li>The app requests <strong>a single restricted scope</strong>: <code>https://www.googleapis.com/auth/drive.appdata</code> (Google Drive Hidden Application Data Folder).</li>
+                                    <li><strong>Limited Scope Guarantee:</strong> The AppData folder is an isolated directory created specifically for TingTing. The app <strong>HAS NO ACCESS</strong> to read, view, edit, or delete any of your personal files, photos, spreadsheets, or folders stored elsewhere in your Google Drive.</li>
+                                    <li><strong>Compliance with Google API Services User Data Policy:</strong> TingTing's use and transfer to any other app of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
+                                    <li>All upload and download operations are encrypted in transit via HTTPS/TLS 1.3. You can disconnect or revoke access at any time via App Settings or your Google Account Security Dashboard.</li>
+                                </ol>
+                            </li>
+                            <li><strong>Data Export (CSV & PDF):</strong> You can export detailed transaction logs to CSV or print-ready PDF reports on-demand directly on your device.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 1.3 Notes EN -->
+                    <div class="section-box">
+                        <h3>📝 1.3 Personal Notes & Rich Text Editor</h3>
+                        <p><strong>Data Involved:</strong> Note titles, rich formatted text content, color labels, and category groups.</p>
+                        <p><strong>Mechanism:</strong> Handled entirely on your local device via SharedPreferences and local storage. No note content is ever synchronized to outside servers, preserving complete confidentiality for your thoughts.</p>
+                    </div>
+
+                    <!-- 1.4 EPUB Reader EN -->
+                    <div class="section-box">
+                        <h3>📚 1.4 EPUB E-Book Reader & Local Wi-Fi Upload Server</h3>
+                        <p><strong>Reading Records:</strong> Imported EPUB documents, bookmarks, highlights, reading progress, and time statistics are stored locally in the app's SQLite database (<code>epub_database</code>).</p>
+                        <p><strong>Local Wi-Fi Upload Server Feature:</strong></p>
+                        <ul>
+                            <li>TingTing includes an embedded HTTP server (powered by the Dart Shelf framework) that enables transferring book files directly from your computer browser to your phone over your local home Wi-Fi network (port 8080).</li>
+                            <li><strong>Strictly Local (LAN Only):</strong> File transfers occur directly peer-to-peer over your private Wi-Fi network without leaving your local area network.</li>
+                            <li><strong>No Internet Relay:</strong> E-book files NEVER pass through external servers or cloud intermediaries.</li>
+                            <li>The local Wi-Fi server only operates when you actively open the Wi-Fi Upload screen and automatically shuts down when you leave.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 1.5 TikTok Downloader EN -->
+                    <div class="section-box">
+                        <h3>🎬 1.5 TikTok Video Downloader Utility</h3>
+                        <p><strong>Functionality:</strong> Users paste public TikTok video URLs to retrieve clean, watermark-free video or image files.</p>
+                        <p><strong>Privacy Guarantees:</strong></p>
+                        <ul>
+                            <li>The App <strong>does not require any TikTok login credentials</strong> and never collects usernames, passwords, cookies, or profile information.</li>
+                            <li>We do not record your TikTok viewing or browsing history.</li>
+                            <li>Downloaded media files are saved directly into your device's Photo Library or Downloads folder via official media APIs (Gal).</li>
+                        </ul>
+                    </div>
+
+                    <!-- 1.6 Traffic Fine EN -->
+                    <div class="section-box">
+                        <h3>🚦 1.6 Traffic Fine & Violation Lookup</h3>
+                        <p><strong>Functionality:</strong> Enables users to query publicly published road violation records by entering vehicle license plates and vehicle types.</p>
+                        <p><strong>Data Processing:</strong> Requests are transmitted securely over HTTPS using HMAC-SHA256 signature verification to preserve query integrity. TingTing does not track vehicle GPS trajectories, driver licenses, or registered owner identities.</p>
+                    </div>
+
+                    <!-- 1.7 Weather EN -->
+                    <div class="section-box">
+                        <h3>⛅ 1.7 Weather Forecast & Location Permissions</h3>
+                        <p><strong>Functionality:</strong> Provides real-time weather metrics, multi-day forecasts, air quality, radar, and tropical storm alerts.</p>
+                        <p><strong>Location Permission (GPS):</strong></p>
+                        <ul>
+                            <li>Location access is requested ONLY when you tap "Current Location Weather". We request low-accuracy coordinates (<code>LocationAccuracy.low</code>), solely sufficient to determine your general district or province.</li>
+                            <li><strong>No Background Tracking:</strong> TingTing NEVER tracks your location in the background. GPS coordinates are sampled instantaneously only upon a user-triggered refresh.</li>
+                            <li><strong>No Location Logging:</strong> We do not log movement histories and never monetize or share location coordinates with advertising vendors.</li>
+                            <li><strong>Full Fallback:</strong> If you decline location permissions, you can freely search and select any province manually from the built-in list.</li>
+                        </ul>
+                    </div>
+
+                    <!-- 1.8 Lunar & Numerology EN -->
+                    <div class="section-box">
+                        <h3>🌙 1.8 Vietnamese Lunar Calendar & Numerology Calculator</h3>
+                        <p><strong>Lunar Calendar:</strong> Astronomical solar-to-lunar calculations run <strong>100% offline</strong> directly on your device without network calls.</p>
+                        <p><strong>Pythagorean Numerology:</strong> Computes life path, soul, and destiny numbers based on user-entered birthdates and names. Calculations occur locally on-device; birthdates are never logged or transmitted remotely.</p>
+                    </div>
+
+                    <!-- 1.9 Lottery, News, Gamification EN -->
+                    <div class="section-box">
+                        <h3>📰 1.9 Lottery Results, News Aggregation & Habit Gamification</h3>
+                        <p><strong>Lottery & News:</strong> Fetches read-only public lottery draws and news feeds for informational convenience. Bookmarks are saved locally on your phone.</p>
+                        <p><strong>Gamification & Streaks:</strong> Tracks consecutive financial logging days and calculates reward badges in local SQLite to help build healthy money habits.</p>
+                    </div>
+                </div>
+
+                <!-- SECTION 2 EN -->
+                <div class="policy-section" id="sec-en-2">
+                    <h2>2. Device Permissions & Specific Purposes</h2>
+                    <p>TingTing adheres strictly to data minimization principles. We only request permissions necessary to deliver the explicit features you choose to use:</p>
+
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Permission</th>
+                                    <th>Status</th>
+                                    <th>Actual Use Case</th>
+                                    <th>How to Manage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="perm-tag">INTERNET</span></td>
+                                    <td><span class="perm-required">Required</span></td>
+                                    <td>To retrieve weather, public news, lottery results, traffic violation status, Google Drive backups, and video downloads.</td>
+                                    <td>Standard platform permission.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="perm-tag">USE_BIOMETRIC</span> / <span class="perm-tag">NSFaceIDUsageDescription</span></td>
+                                    <td><span class="perm-optional">Optional</span></td>
+                                    <td>Unlocking the app with fingerprint or Face ID to safeguard your personal financial records.</td>
+                                    <td>Toggle on/off inside <em>Settings &gt; App Lock</em>.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="perm-tag">ACCESS_COARSE_LOCATION</span> / <span class="perm-tag">ACCESS_FINE_LOCATION</span></td>
+                                    <td><span class="perm-optional">Optional</span></td>
+                                    <td>Determining your general region for local weather forecasts. No background tracking.</td>
+                                    <td>Can be denied; select province manually instead.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="perm-tag">READ_MEDIA_VIDEO</span> / <span class="perm-tag">WRITE_EXTERNAL_STORAGE</span> / <span class="perm-tag">NSPhotoLibraryAddUsageDescription</span></td>
+                                    <td><span class="perm-optional">Optional</span></td>
+                                    <td>Saving downloaded TikTok videos directly into your device Photo Gallery.</td>
+                                    <td>Prompted by OS on initial download action.</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="perm-tag">READ_EXTERNAL_STORAGE</span> / <span class="perm-tag">File Picker</span></td>
+                                    <td><span class="perm-optional">Optional</span></td>
+                                    <td>Selecting EPUB e-book files or picking a local backup JSON file to restore transactions.</td>
+                                    <td>Only requested when tapping "Import File".</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="perm-tag">ACCESS_WIFI_STATE</span> / Local Network</td>
+                                    <td><span class="perm-optional">Optional</span></td>
+                                    <td>Discovering device LAN IP for the local Wi-Fi EPUB upload server.</td>
+                                    <td>Active only while on the Wi-Fi Upload screen.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- SECTION 3 EN -->
+                <div class="policy-section" id="sec-en-3">
+                    <h2>3. Third-Party Services & No Tracking Guarantee</h2>
+                    <div class="alert-box">
+                        <strong>🚫 No Behavioral Ad-Tracking Guarantee:</strong> TingTing does NOT integrate commercial behavioral tracking SDKs (such as Facebook Pixel or AppsFlyer) and does NOT monetize your personal or financial data.
+                    </div>
+                    <p>The app interacts with essential service endpoints strictly as required for user-initiated operations:</p>
+                    <ul>
+                        <li><strong>Google Drive API (Google LLC):</strong> Used solely when you enable Google Drive backup to store encrypted backups in your private AppData directory.</li>
+                        <li><strong>Weather Services (Windy Node / Open APIs):</strong> Queries atmospheric forecast data based on region coordinates without personal identifiers.</li>
+                        <li><strong>Public Traffic Fine APIs:</strong> Secure queries using license plates over HTTPS to fetch public administrative notices.</li>
+                        <li><strong>Public RSS / News Feeds:</strong> Retrieves syndicated public articles for daily reading.</li>
+                    </ul>
+                </div>
+
+                <!-- SECTION 4 EN -->
+                <div class="policy-section" id="sec-en-4">
+                    <h2>4. Data Retention, Security & Deletion</h2>
+                    <p><strong>Technical Security Measures:</strong></p>
+                    <ul>
+                        <li>On-device data is secured within standard OS application sandboxes, preventing external apps from inspecting TingTing's SQLite database.</li>
+                        <li>Biometric authentication and PIN locks provide defense against unauthorized physical access to your device.</li>
+                        <li>All outbound network traffic is encrypted via HTTPS / TLS 1.3.</li>
+                    </ul>
+
+                    <p><strong>Data Deletion Rights:</strong></p>
+                    <ul>
+                        <li><strong>Granular Deletion:</strong> You can delete any individual transaction, category, note, book, or video record at any time within the app.</li>
+                        <li><strong>Complete Device Deletion:</strong> Uninstalling the application or selecting <em>Clear Storage / Clear Data</em> in device settings permanently wipes all local SQLite databases and configurations immediately.</li>
+                        <li><strong>Cloud Backup Deletion:</strong> You can remove backup snapshots directly within TingTing settings or revoke permissions anytime at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a>.</li>
+                    </ul>
+                </div>
+
+                <!-- SECTION 5 EN -->
+                <div class="policy-section" id="sec-en-5">
+                    <h2>5. Children's Privacy (COPPA & GDPR-K Compliance)</h2>
+                    <p>TingTing is designed for general audiences and is not directed towards children under 13. We do not knowingly collect personally identifiable information from children. Because our application relies on local on-device processing, it is safe and appropriate for all family members.</p>
+                </div>
+
+                <!-- SECTION 6 EN -->
+                <div class="policy-section" id="sec-en-6">
+                    <h2>6. User Legal Rights</h2>
+                    <p>In accordance with global privacy frameworks (including GDPR, CCPA, and Vietnamese Decree 13/2023/ND-CP), you hold full sovereignty over your information:</p>
+                    <ul>
+                        <li><strong>Right to Transparency:</strong> The right to clearly know how data is handled, as set out in this policy.</li>
+                        <li><strong>Right to Portability & Ownership:</strong> Your records belong to you; you can export your data to CSV, PDF, or JSON at will.</li>
+                        <li><strong>Right to Revocation:</strong> You can freely revoke location, gallery, biometric, or Google Drive permissions at any time without losing core local functionality.</li>
+                    </ul>
+                </div>
+
+                <!-- SECTION 7 EN -->
+                <div class="policy-section" id="sec-en-7">
+                    <h2>7. Policy Updates</h2>
+                    <p>We may periodically update this Privacy Policy to reflect app enhancements or statutory requirements. All revisions will be posted openly on this webpage with the revised effective date clearly shown. We encourage you to review this page periodically.</p>
+                </div>
+
+                <!-- SECTION 8 EN -->
+                <div class="policy-section" id="sec-en-8">
+                    <h2>8. Contact Us</h2>
+                    <p>If you have any questions, suggestions, or data protection inquiries regarding TingTing, please feel free to reach out directly:</p>
+
+                    <div class="contact-box">
+                        <strong style="font-size: 1.05rem; color: var(--primary-dark);">TingTing App Development Team / MHung Apps</strong>
+                        <div class="contact-grid">
+                            <div class="contact-item">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">Official Developer Email:</div>
+                                    <a href="mailto:phamhung2015cb@gmail.com">phamhung2015cb@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                <div>
+                                    <div style="font-size: 0.8rem; color: var(--text-muted);">Developer Portfolio:</div>
+                                    <a href="../index.html">MHung Apps Portfolio</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 MHung. All rights reserved. <a href="../index.html">Quay về Trang chủ (Home)</a> | <a href="../qrcode/privacy.html">QR Code Scanner Policy</a></p>
+        </footer>
+    </div>
+
+    <!-- JavaScript Interactive Functionality -->
+    <script>
+        const tocData = {
+            vi: [
+                { id: 'sec-vi-1', text: '1. Xử lý dữ liệu từng tính năng' },
+                { id: 'sec-vi-2', text: '2. Quyền hạn thiết bị' },
+                { id: 'sec-vi-3', text: '3. Bên thứ ba & Không quảng cáo' },
+                { id: 'sec-vi-4', text: '4. Lưu giữ & Xóa dữ liệu' },
+                { id: 'sec-vi-5', text: '5. Quyền riêng tư trẻ em' },
+                { id: 'sec-vi-6', text: '6. Quyền của người dùng' },
+                { id: 'sec-vi-7', text: '7. Cập nhật chính sách' },
+                { id: 'sec-vi-8', text: '8. Thông tin liên hệ' }
+            ],
+            en: [
+                { id: 'sec-en-1', text: '1. Feature Data Handling' },
+                { id: 'sec-en-2', text: '2. Device Permissions' },
+                { id: 'sec-en-3', text: '3. Third-Parties & No Tracking' },
+                { id: 'sec-en-4', text: '4. Data Retention & Deletion' },
+                { id: 'sec-en-5', text: '5. Children\'s Privacy' },
+                { id: 'sec-en-6', text: '6. User Legal Rights' },
+                { id: 'sec-en-7', text: '7. Policy Updates' },
+                { id: 'sec-en-8', text: '8. Contact Information' }
+            ]
+        };
+
+        function renderTOC(lang) {
+            const container = document.getElementById('toc-links');
+            const items = tocData[lang] || tocData.vi;
+            container.innerHTML = items.map(item => `
+                <a href="#${item.id}" class="toc-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    <span>${item.text}</span>
+                </a>
+            `).join('');
+        }
+
+        function switchLanguage(lang) {
+            const viContent = document.getElementById('content-vi');
+            const enContent = document.getElementById('content-en');
+            const btnVi = document.getElementById('btn-vi');
+            const btnEn = document.getElementById('btn-en');
+            const heading = document.getElementById('hero-heading');
+            const btnBack = document.querySelector('#btn-back span');
+            const tocHeading = document.getElementById('toc-heading');
+            const searchInput = document.getElementById('policy-search');
+            const ctaBtn = document.querySelector('#hero-cta-btn span');
+
+            if (lang === 'vi') {
+                viContent.classList.add('active');
+                enContent.classList.remove('active');
+                btnVi.classList.add('active');
+                btnEn.classList.remove('active');
+                heading.textContent = 'Chính sách bảo mật';
+                btnBack.textContent = 'Trang chủ / Home Portfolio';
+                tocHeading.textContent = 'Mục lục điều hướng nhanh';
+                searchInput.placeholder = 'Tìm kiếm nhanh trong chính sách (ví dụ: Google Drive, vị trí, vân tay, sao lưu, xóa dữ liệu)...';
+                ctaBtn.textContent = 'Tải trên Google Play';
+                document.documentElement.lang = 'vi';
+                renderTOC('vi');
+            } else {
+                enContent.classList.add('active');
+                viContent.classList.remove('active');
+                btnEn.classList.add('active');
+                btnVi.classList.remove('active');
+                heading.textContent = 'Privacy Policy';
+                btnBack.textContent = 'Home / Developer Portfolio';
+                tocHeading.textContent = 'Quick Navigation';
+                searchInput.placeholder = 'Quick search in policy (e.g. Google Drive, location, biometric, backup, deletion)...';
+                ctaBtn.textContent = 'Get on Google Play';
+                document.documentElement.lang = 'en';
+                renderTOC('en');
+            }
+
+            // Clear search filter when switching language
+            if (searchInput.value) {
+                searchInput.value = '';
+                handleSearch('');
+            }
+        }
+
+        function handleSearch(keyword) {
+            const term = keyword.trim().toLowerCase();
+            const activeContent = document.querySelector('.lang-content.active');
+            if (!activeContent) return;
+
+            const sections = activeContent.querySelectorAll('.policy-section');
+            sections.forEach(sec => {
+                if (!term) {
+                    sec.style.display = 'block';
+                    const boxes = sec.querySelectorAll('.section-box');
+                    boxes.forEach(b => b.style.display = 'block');
+                    return;
+                }
+
+                const text = sec.textContent.toLowerCase();
+                if (text.includes(term)) {
+                    sec.style.display = 'block';
+                    const boxes = sec.querySelectorAll('.section-box');
+                    boxes.forEach(b => {
+                        const bText = b.textContent.toLowerCase();
+                        b.style.display = bText.includes(term) ? 'block' : 'none';
+                    });
+                } else {
+                    sec.style.display = 'none';
+                }
+            });
+        }
+
+        // Initialize state
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.toLowerCase();
+            if (hash === '#english' || hash === '#en' || hash.startsWith('#sec-en')) {
+                switchLanguage('en');
+            } else {
+                switchLanguage('vi');
+            }
+        });
+    </script>
+</body>
+
+</html>
+
